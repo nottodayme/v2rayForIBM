@@ -1,1 +1,1 @@
-web: ./v2ray-linux-64 for IBM/v2ray
+web: ./v2ray-linux-64ForIBM/v2ray
