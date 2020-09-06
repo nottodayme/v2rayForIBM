@@ -1,12 +1,8 @@
-name: IBM Cloud Auto Restart
+name: IBM Cloud Auto Restart base3-5
 
 on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
   schedule:
-    - cron: '0 12 * * FRI'
+    - cron: '0 4 * * FRI'
 
 jobs:
   ibm-cloud-restart:
@@ -17,7 +13,7 @@ jobs:
 
     - name: Init
       run: |
-        chmod -R 777 ./IBM_Cloud_CLI/
+        chmod -R 755 ./IBM_Cloud_CLI/
         ./IBM_Cloud_CLI/ibmcloud config --check-version=false
     - name: Login IBM Cloud
       env:
